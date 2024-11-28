@@ -4,9 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && npm run sentry:sourcemaps",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org olenka --project sentry-test dist/sentry-test && sentry-cli sourcemaps upload --org olenka --project sentry-test dist/sentry-test"
   },
   "private": true,
   "dependencies": {

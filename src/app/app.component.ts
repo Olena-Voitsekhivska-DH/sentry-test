@@ -9,10 +9,10 @@ export class AppComponent {
   title = 'sentry-test';
 
   constructor() {
-    new Error('Constructor error');
+    throw('Button Error')
   }
 
   handleClick() {
-    new Error('Button error');
+    throw('Button Error')
   }
 }
